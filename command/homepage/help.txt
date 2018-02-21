@@ -1,0 +1,14 @@
+
+NAME
+    nopa homepage - Open the NPM homepage of specified package.
+
+SYNOPSIS
+    nopa homepage [--name] <package-name> [--type (npm|repository)]
+
+OPTIONS
+    --name <package-name>
+    NPM package name.
+
+    --type (npm|repository)
+    Type of homepage. 
+    By default, the homepage defined in package.json will be opened.

@@ -1,0 +1,33 @@
+{
+    "bin": {
+        "nopa": "bin/nopa.js"
+    },
+    "dependencies": {
+        "commandos": "^0.1.5",
+        "htp": "^0.6.2",
+        "jinang": "^0.8.0",
+        "noda": "^0.3.0"
+    },
+    "devDependencies": {},
+    "directories": {},
+    "scripts": {},
+    "name": "nopa",
+    "version": "0.0.1",
+    "main": "index.js",
+    "keywords": [
+        "npm",
+        "package-home",
+        "package-repo"
+    ],
+    "homepage": "https://github.com/YounGoat/nopa",
+    "description": "Node.js Packages Assistant",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YounGoat/nopa.git"
+    },
+    "author": {
+        "name": "YounGoat",
+        "email": "youngoat@163.com",
+        "url": "https://youngoat.github.io"
+    }
+}
