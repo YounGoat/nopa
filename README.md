@@ -1,6 +1,10 @@
 #	nopa
 __Node.js Packages Assistant__
 
+[![total downloads of nopa](https://img.shields.io/npm/dt/nopa.svg)](https://www.npmjs.com/package/nopa)
+[![nopa's License](https://img.shields.io/npm/l/nopa.svg)](https://www.npmjs.com/package/nopa)
+[![latest version of nopa](https://img.shields.io/npm/v/nopa.svg)](https://www.npmjs.com/package/nopa)
+
 ##	Table of contents
 
 *	[Get Started](#get-started)
@@ -30,3 +34,8 @@ The following sub commands or command-sets are avaiable under command `nopa`:
 
 *	__homepage__  
 	To open / display the homepage of NPM package.
+
+*	__names__  
+	Find available package names.
+	
+Run `nopa help <command-name>` to read detailed manual.

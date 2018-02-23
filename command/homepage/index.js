@@ -9,11 +9,11 @@ const MODULE_REQUIRE = 1
 	, commandos = require('commandos')
 	, htp = require('htp')
 	, modifyUrl = require('jinang/modifyUrl')
+	, open = require('jinang/open')
 	, noda = require('noda')
 	
 	/* in-package */
 	, config = noda.inRequire('lib/config')
-	, open = noda.inRequire('lib/open')
 	;
 
 function help() {
@@ -83,16 +83,9 @@ function homepage_repository(pkgname) {
 			return;
 		}
 
-		let info = url.parse(urlname);
-		if (['http:', 'https:'].includes(info.protocol)) {
-			console.log(`open ${urlname}`);
-			open(urlname);
-			return;
-		}
-		else {
-			console.log(`Unsupported url: ${urlname}`);
-			return;
-		}
+		console.log(`open ${urlname}`);
+		open(urlname);
+		return;
 	});
 }
 

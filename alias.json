@@ -1,0 +1,4 @@
+[
+	[ ["open"], ["homepage", "--type", "npm"] ],
+	[ ["freenames"], ["names", "--hide-occupied" ] ]
+]

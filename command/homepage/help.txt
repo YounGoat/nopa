@@ -1,6 +1,6 @@
 
 NAME
-    nopa homepage - Open the NPM homepage of specified package.
+    nopa homepage - Open homepage of specified package.
 
 SYNOPSIS
     nopa homepage [--name] <package-name> [--type (npm|repository)]

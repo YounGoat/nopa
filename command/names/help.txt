@@ -1,0 +1,42 @@
+
+NAME
+    nopa names - List package names matching specified pattern.
+
+SYNOPSIS
+    nopa names [--starts-with <prefix>] [--hide-free] [--hide-occupied] 
+    nopa names [--ends-with <prefix>] [--hide-free] [--hide-occupied] 
+    nopa names [--pattern <pattern>] [--hide-free] [--hide-occupied] 
+
+OPTIONS
+    --starts-with <prefix>
+    Package name should start with specified string. 
+    Equals to --pattern "<prefix>[:alnum:]"
+
+    --ends-with <postfix>
+    Package name should end with specified string.
+    Equals to --pattern "[:alnum:]<postfix>"
+
+    --pattern <pattern>
+    Package name pattern. 
+
+    --hide-occupied 
+    Hide the package names.
+
+    --hide-free
+    Hide the names which are free (available to be occupied).
+
+PATTERN
+    The pattern looks like, but NOT a regular expression. E.g.
+    "nop[:lower:]"
+    "node-[:alpha:][:alpha:]"
+
+    You can use the following character classes,
+    * lower    = [a-z]
+    * upper    = [A-Z]
+    * number   = [0-9]
+    * alpha    = [A-Za-z]
+    * alnum    = [A-Za-z0-9]
+    * xdigit   = [A-Fa-f0-9]
+
+SEE ALSO
+    https://en.wikipedia.org/wiki/Regular_expression#Character_classes
