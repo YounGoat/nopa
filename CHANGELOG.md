@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.0.3] - Feb 24th, 2018
+
+*	Command `nopa apidoc` added.
+
 ##	[0.0.2] - Feb 23th, 2018
 
 *	Command `nopa names` added.

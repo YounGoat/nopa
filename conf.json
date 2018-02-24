@@ -1,0 +1,6 @@
+{
+	"npm.home" : "https://www.npmjs.com/",
+	"npm.registry" : "https://registry.npmjs.org/",
+	"node.dist.meta": "https://nodejs.org/dist/index.json",
+	"node.docs.api" : "https://nodejs.org/docs/"
+}

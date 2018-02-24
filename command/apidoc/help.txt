@@ -1,0 +1,20 @@
+
+NAME
+    nopa apidoc - Open Node.js API online document.
+
+SYNOPSIS
+    nopa apidoc [[--name] <builtin-module-name>] [[--version] <ver>]
+
+OPTIONS
+    --name <builtin-module-name>
+    Node.js built-in module name.
+
+    --version <ver>
+    Corresponding Node.js version.
+
+EXAMPLES
+    nopa apidoc http
+    Open online document about module HTTP of current Node.js version.
+
+    nopa apidoc --version x
+    Open online document about latest Node.js version.

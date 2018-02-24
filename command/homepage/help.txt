@@ -12,3 +12,7 @@ OPTIONS
     --type (npm|repository)
     Type of homepage. 
     By default, the homepage defined in package.json will be opened.
+
+SEE ALSO
+    npm docs
+    npm home

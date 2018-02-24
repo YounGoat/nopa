@@ -14,12 +14,13 @@
     "directories": {},
     "scripts": {},
     "name": "nopa",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "index.js",
     "keywords": [
         "npm",
         "package-home",
-        "package-repo"
+        "package-repo",
+        "nodejs-api-document"
     ],
     "homepage": "https://github.com/YounGoat/nopa",
     "description": "Node.js Packages Assistant",

@@ -115,7 +115,7 @@ function run(argv) {
 	else if (cmd.type == 'npm') {
 		return homepage_npm(cmd.name);
 	}
-	else if ('repository'.startsWith(cmd.type)) {
+	else if ('repository'.startsWith(cmd.type) && cmd.type.length >= 4) {
 		return homepage_repository(cmd.name);
 	}
 	else if (cmd.type) {
