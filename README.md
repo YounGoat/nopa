@@ -33,10 +33,13 @@ nopa help homepage
 The following sub commands or command-sets are avaiable under command `nopa`:
 
 *	__apidoc__  
-	To open Node.js online document of specified built-in module of specified Node.js version.
+	Open Node.js online document of specified built-in module of specified Node.js version.
+
+*	__config__  
+	Manage configurations.
 
 *	__homepage__  
-	To open / display the homepage of NPM package.
+	Open / display the homepage of NPM package.
 
 *	__names__  
 	Find available package names.

@@ -1,0 +1,26 @@
+
+NAME
+    nopa config - List or change configurations used by nopa.
+
+SYNOPSIS
+    nopa config --list [<name-piece>]
+    # List configurations.
+    
+    nopa config --name <name> [--value [value]]
+    # Read / set config property.
+
+    nopa config --reset [--name <name>]
+    # Reset configurations.     
+
+OPTIONS
+    --list [<name-piece>]
+    List configurations.
+
+    --reset [<name]
+    Reset configurations.
+
+    --name <name>
+    Config property name.
+
+    --value <value>
+    Config property value.

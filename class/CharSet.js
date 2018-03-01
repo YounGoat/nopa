@@ -7,6 +7,24 @@ const MODULE_REQUIRE = 1
 	, overload2 = require('overload2')
 	
 	/* in-package */
+
+	/* in-file */
+
+	/**
+	 * 创建对象生成器。
+	 * @param {Function} C 构造函数
+	 * @see http://stackoverflow.com/questions/1606797/use-of-apply-with-new-operator-is-this-possible/#1608546
+	 */
+	, generateCreator = function(C) {
+		function F(args) {
+			return C.apply(this, args);
+		}
+		F.prototype = C.prototype;
+
+		return function() {
+			return new F(arguments);
+		}
+	}	
 	;
 
 const CharType = overload2.Type(s => typeof s == 'string' && s.length == 1 || typeof s == 'number');
@@ -115,6 +133,10 @@ CharSet.prototype.reset = function() {
 	return this;
 };
 
+CharSet.prototype.isStarted = function() {
+	return this.cursor != null;
+};
+
 CharSet.prototype.isTouched = function() {
 	let touched;
 
@@ -188,11 +210,40 @@ CharSet.prototype.concat = overload2()
 	)
 	;
 
+CharSet.parse = generateCreator(CharSet);
 
-// var c1 = new CharSet('a', 'z');
-// var c2 = new CharSet('A', 'Z');
-// var c3 = new CharSet('0', '9');
-// console.log(c1.concat(c2, c3).toArray());
-// // console.log(c);
+CharSet.concat = function() {
+	let charsets = Array.from(arguments).map(arg => {
+		if (arg instanceof CharSet) {
+			// DO NOTHING.
+		}
+		else if (arg instanceof Array) {
+			arg = CharSet.parse.apply(null, arg);
+		}
+		else {
+			arg = new CharSet(arg);
+		}
+		return arg;
+	});	
+	let cs = new CharSet('');
+	return cs.concat.apply(cs, charsets);
+};
+
+CharSet.generate = function(name) {
+	switch (name) {
+		case 'lower'  : return new CharSet('a', 'z');
+		case 'upper'  : return new CharSet('A', 'Z');
+		case 'number' : return new CharSet('0', '9');
+		case 'alpha'  : return CharSet.concat(['A', 'Z'], ['a', 'z']);
+		case 'alnum'  : return CharSet.concat(['A', 'Z'], ['a', 'z'], ['0', '9']);
+		case 'xdigit' : return CharSet.concat(['A', 'F'], ['a', 'f'], ['0', '9']);
+
+		case 'xdigit.upper' : return CharSet()
+		case 'vowel'  : return new CharSet('aeiou');
+		case 'VOWEL'  : return new CharSet('AEIOU');
+		case 'conso'  : return new CharSet('bcdfghjklmnpqrstvwxyz');
+		case 'CONSO'  : return new CharSet('BCDFGHJKLMNPQRSTVWXYZ');
+	}
+};	
 
 module.exports = CharSet;
