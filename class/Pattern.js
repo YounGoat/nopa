@@ -36,7 +36,7 @@ function Pattern(pattern) {
 		let right = pattern.substr(ret.index + ret[0].length);
 		let name = ret[1];
 
-		_charsets.push(genCharSet(name));
+		_charsets.push(CharSet.generate(name));
 		_texts.push(left);
 		pattern = right;
 	}
@@ -54,7 +54,7 @@ Pattern.prototype.next = function() {
 		
 		if (moved) {
 			// Get current char of the charset.
-			chars[i] = charset.next(0);
+			chars[i] = charset.isStarted() ? charset.next(0) : charset.next();
 		}
 		else if (charset.isTouched()) {
 			if (i == 0) {

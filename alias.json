@@ -1,4 +1,5 @@
 [
 	[ ["open"], ["homepage", "--type", "npm"] ],
+	[ ["repo"], ["homepage", "--type", "repository"] ],
 	[ ["freenames"], ["names", "--hide-occupied" ] ]
 ]

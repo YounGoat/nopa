@@ -35,7 +35,11 @@ function find(options) {
 		if (!pkgname) return;
 		
 		let urlname = modifyUrl.pathname(config('npm.registry'), `${pkgname}/latest`, 'w');
-		htp.get(urlname, (err, response) => {
+		
+		// Some NPM mirror (e.g. TAONPM) will redirect the request to NPM official registry if non-mainstream user-agent occurs.
+		let headers = { 'user-agent': 'Mozilla' };
+
+		htp.get(urlname, headers, (err, response) => {
 			if (err) {
 				errors++;
 			}
