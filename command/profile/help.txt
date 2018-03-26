@@ -1,0 +1,21 @@
+
+NAME
+    nopa profile - Open profile page of NPM user or organization.
+
+SYNOPSIS
+    nopa profile --user <username>
+    nopa profile --org <orgname>
+    nopa profile <name>
+
+OPTIONS
+    --user <username>
+    NPM user name.
+
+    --org <orgname>
+    NPM organization name.
+
+    <name>
+    NPM user name (starting with ~) or organization name (starting with @).
+
+SEE ALSO
+    npm profile get

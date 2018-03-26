@@ -2,6 +2,14 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.1.0] - Mar 26th, 2018
+
+*   Sub command `nopa profile` added.
+*   Sub command `nopa statistics` added.
+*   Sub command `nopa open` added and the former homonymic alias is removed.
+*   Alias `nopa open` is removed.
+*   Fixed the bug on `nopa homepage --type npm` that an incorrect URL pathname `/packages/<name>` is responsed.
+
 ##	[0.0.5] - Mar 1st, 2018
 
 *	Alias `nopa repo` added.

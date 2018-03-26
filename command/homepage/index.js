@@ -90,7 +90,7 @@ function homepage_repository(pkgname) {
 }
 
 function homepage_npm(pkgname) {
-	let urlname = modifyUrl.pathname(config('npm.home'), `packages/${pkgname}`, 'w');
+	let urlname = modifyUrl.pathname(config('npm.home'), `package/${pkgname}`, 'w');
 	open(urlname);
 }
 
@@ -104,7 +104,7 @@ function run(argv) {
 		]
 	];
 	
-	const cmd = commandos.parse([ 'foo' ].concat(argv), { groups, catcher: help });
+	const cmd = commandos.parse.onlyArgs(argv, { groups, catcher: help });
 
 	if (!cmd) {
 		return;

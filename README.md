@@ -5,13 +5,14 @@ __Node.js Packages Assistant__
 [![nopa's License](https://img.shields.io/npm/l/nopa.svg)](https://www.npmjs.com/package/nopa)
 [![latest version of nopa](https://img.shields.io/npm/v/nopa.svg)](https://www.npmjs.com/package/nopa)
 
-##	Table of contents
+##	Description
+
+__nopa__ is a toolset offering some interesting, handy commands about NPM packages.
+
+##	ToC, Table of Contents
 
 *	[Get Started](#get-started)
 * 	[Sub Commands](#sub-commands)
-
-##	Links
-
 *	[CHANGE LOG](./CHANGELOG.md)
 *	[Homepage](https://github.com/YounGoat/nopa)
 
@@ -43,5 +44,16 @@ The following sub commands or command-sets are avaiable under command `nopa`:
 
 *	__names__  
 	Find available package names.
-	
+
+*	__open__  
+	A bridge command of __homepage__ or __profile__.
+
+*	__profile__  
+	Open / display the profile page of NPM user or organization.
+
+*	__statistics__  
+	List statstical information about NPM package or user.
+
+When no ambiguity present, using heading characters of a sub command is acceptable. E.g., `nopa stat` is regarded as `nopa statistics`.
+
 Run `nopa help <command-name>` to read detailed manual.

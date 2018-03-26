@@ -4,18 +4,19 @@
     },
     "dependencies": {
         "colors": "^1.1.2",
-        "commandos": "^0.1.6",
-        "htp": "^0.6.2",
+        "commandos": "^0.2.0",
+        "htp": "^0.7.0",
         "if2": "^0.2.0",
-        "jinang": "^0.9.0",
+        "jinang": "^0.17.0",
         "noda": "^0.3.0",
-        "overload2": "^0.3.0"
+        "npm-registry-rest": "^0.0.2",
+        "overload2": "^0.3.1"
     },
     "devDependencies": {},
     "directories": {},
     "scripts": {},
     "name": "nopa",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "main": "index.js",
     "keywords": [
         "npm",

@@ -96,7 +96,7 @@ function run(argv) {
 		]
 	];
 	
-	const cmd = commandos.parse([ 'foo' ].concat(argv), { groups, catcher: help });
+	const cmd = commandos.parse.onlyArgs(argv, { groups, catcher: help });
 
 	if (!cmd) {
 		return;

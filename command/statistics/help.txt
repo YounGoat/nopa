@@ -1,0 +1,20 @@
+
+NAME
+    nopa statistics - Show statistics info.
+
+SYNOPSIS
+    nopa statistics [--package <package-name>] [--owner <username>] [<name>]
+
+OPTIONS
+    --package <package-name>
+    NPM package name.
+
+    --owner <username>
+    NPM user name.
+
+    <name>
+    * NPM user name if starting with ~
+    * or, NPM package name
+
+SEE ALSO
+    npm star

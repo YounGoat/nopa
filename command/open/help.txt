@@ -1,0 +1,16 @@
+
+NAME
+    nopa open - Alias of subcommands `homepage`, `profile`.
+
+SYNOPSIS
+    nopa open <name>
+
+OPTIONS
+    <name>
+    * NPM user name if starting with ~
+    * NPM organization name if starting with @ and including no /
+    * or, NPM package name
+
+SEE ALSO
+    nopa homepage
+    nopa profile
