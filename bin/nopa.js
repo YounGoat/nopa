@@ -4,7 +4,6 @@
 
 const MODULE_REQUIRE = 1
     /* built-in */
-    , fs = require('fs')
     
     /* NPM */
     , noda = require('noda')

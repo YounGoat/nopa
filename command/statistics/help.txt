@@ -3,7 +3,9 @@ NAME
     nopa statistics - Show statistics info.
 
 SYNOPSIS
-    nopa statistics [--package <package-name>] [--owner <username>] [<name>]
+    nopa statistics --package <package-name> 
+    nopa statistics --owner <username> [--orderby (name|downloads)] 
+    nopa statistics [--orderby (name|downloads)]  [<name>]
 
 OPTIONS
     --package <package-name>
@@ -11,6 +13,9 @@ OPTIONS
 
     --owner <username>
     NPM user name.
+
+    --orderby (name|downloads)
+    Sort the packages by name or downloads (last-day).
 
     <name>
     * NPM user name if starting with ~

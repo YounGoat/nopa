@@ -11,6 +11,8 @@ const MODULE_REQUIRE = 1
 	, modifyUrl = require('jinang/modifyUrl')
 	, open = require('jinang/open')
 	, noda = require('noda')
+
+	, getPackage = require('npm-registry-rest/getPackage')
 	
 	/* in-package */
 	, config = noda.inRequire('lib/config')
