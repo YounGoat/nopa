@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.1.3] - Apr 3rd, 2018
+
+*   Upgrade dependencies especially __[jinang](https://www.npmjs.com/package/jinang)/[co](https://github.com/YounGoat/jinang/blob/HEAD/docs/co.md)__.
+
 ##  [0.1.2] - Apr 2nd, 2018
 
 *   Fixed the bug of `nopa statistics` on getting owner's stat info. Because [npm-registry-rest/getDownloadCount](https://www.npmjs.com/package/npm-registry-rest) does not support scoped package names on bulk query, `nopa statistics` will exit with exception at that time in previous version.

@@ -43,11 +43,10 @@ function package_stat(name) { co(function*() {
 
 	console.log('-- downloads --');
 	let ranges = [ 'last-day', 'last-week', 'last-month'];
-	for (let i = 0; i < ranges.length; i++) {
-		let range = ranges[i];
+	yield co.each(ranges, function*(range) {
 		let count = yield getDownloadCount({ range, name });
 		console.log(range, '\t', colors.bold(count));
-	}
+	});
 
 }).catch(err => {
 	console.error(`failed to find package: ${name}`);
@@ -84,23 +83,20 @@ function owner_stat(username, orderby) { co(function*() {
 	const range = 'last-day';
 	const counts = {};
 	let ranges = [ 'last-day', 'last-week', 'last-month'];
-	for (let i = 0; i < ranges.length; i++) {
-		let range = ranges[i];
-
+	yield co.each(ranges, function*(range) {
 		// Scoped package names not supported in bulk query.
 		process.stdout.write(`querying download counts (${range})...`);
 		counts[range] = yield getDownloadCount({ range, names: nakedPackageNames });
 		process.stdout.clearLine();
 		process.stdout.cursorTo(0);
 
-		for (let j = 0; j < scopedPackageNames.length; j++) {
-			let name = scopedPackageNames[j];
+		yield co.each(scopedPackageNames, function*(name) {
 			process.stdout.write(`querying download counts (${range} for ${name})...`);
 			counts[range][name] = yield getDownloadCount({ range, name });
 			process.stdout.clearLine();
 			process.stdout.cursorTo(0);
-		}
-	}
+		});
+	});
 
 	let rows = [];
 	let total = { name: 'TOTAL' };
