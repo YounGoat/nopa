@@ -68,6 +68,10 @@ function owner_stat(username, orderby) { co(function*() {
 		packageNames.sort();
 	}
 
+	let scopedPackageNames = [];
+	let nakedPackageNames = packageNames.filter(name => 
+		name.charAt(0) == '@' ? (scopedPackageNames.push(name), false) : true);
+
 	// let stars = {};
 	// for (let i = 0; i < packageNames.length; i++) {
 	// 	let name = packageNames[i];
@@ -82,10 +86,20 @@ function owner_stat(username, orderby) { co(function*() {
 	let ranges = [ 'last-day', 'last-week', 'last-month'];
 	for (let i = 0; i < ranges.length; i++) {
 		let range = ranges[i];
+
+		// Scoped package names not supported in bulk query.
 		process.stdout.write(`querying download counts (${range})...`);
-		counts[range] = yield getDownloadCount({ range, names: packageNames });
+		counts[range] = yield getDownloadCount({ range, names: nakedPackageNames });
 		process.stdout.clearLine();
-		process.stdout.cursorTo(0);	
+		process.stdout.cursorTo(0);
+
+		for (let j = 0; j < scopedPackageNames.length; j++) {
+			let name = scopedPackageNames[j];
+			process.stdout.write(`querying download counts (${range} for ${name})...`);
+			counts[range][name] = yield getDownloadCount({ range, name });
+			process.stdout.clearLine();
+			process.stdout.cursorTo(0);
+		}
 	}
 
 	let rows = [];
