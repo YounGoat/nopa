@@ -1,0 +1,21 @@
+
+NAME
+    nopa stars - Show star count.
+
+SYNOPSIS
+    nopa stars --owner <username> [--orderby (name)] 
+    nopa stars [--orderby (name)]  [<username>]
+
+OPTIONS
+    --owner <username>
+    NPM user name.
+
+    --orderby (name)
+    Sort the packages by name.
+
+    <name>
+    * NPM user name if starting with ~
+
+SEE ALSO
+    npm star
+    nopa statistics

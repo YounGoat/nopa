@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.2.0] - Apr 4th, 2018
+
+*   Sub command `nopa stars` added.
+
 ##  [0.1.3] - Apr 3rd, 2018
 
 *   Upgrade dependencies especially __[jinang](https://www.npmjs.com/package/jinang)/[co](https://github.com/YounGoat/jinang/blob/HEAD/docs/co.md)__.

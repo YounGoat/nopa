@@ -51,6 +51,9 @@ The following sub commands or command-sets are avaiable under command `nopa`:
 *	__profile__  
 	Open / display the profile page of NPM user or organization.
 
+*	__stars__  
+	List count of stars of packages ownered by someone.
+
 *	__statistics__  
 	List statstical information about NPM package or user.
 
