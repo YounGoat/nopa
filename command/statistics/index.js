@@ -85,14 +85,14 @@ function owner_stat(username, orderby) { co(function*() {
 	let ranges = [ 'last-day', 'last-week', 'last-month'];
 	yield co.each(ranges, function*(range) {
 		// Scoped package names not supported in bulk query.
-		process.stdout.write(`querying download counts (${range})...`);
-		counts[range] = yield getDownloadCount({ range, names: nakedPackageNames });
+		process.stdout.write(`querying download counts (${range}) ...`);
+		counts[range] = yield getDownloadCount({ range, names: nakedPackageNames, suppressNotFoundError: true });
 		process.stdout.clearLine();
 		process.stdout.cursorTo(0);
 
 		yield co.each(scopedPackageNames, function*(name) {
-			process.stdout.write(`querying download counts (${range} for ${name})...`);
-			counts[range][name] = yield getDownloadCount({ range, name });
+			process.stdout.write(`querying download counts (${range} for ${name}) ...`);
+			counts[range][name] = yield getDownloadCount({ range, name, suppressNotFoundError: true });
 			process.stdout.clearLine();
 			process.stdout.cursorTo(0);
 		});

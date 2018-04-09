@@ -9,14 +9,14 @@
         "if2": "^0.2.0",
         "jinang": "^0.19.0",
         "noda": "^0.3.0",
-        "npm-registry-rest": "^0.1.2",
+        "npm-registry-rest": "^0.2.0",
         "overload2": "^0.3.1"
     },
     "devDependencies": {},
     "directories": {},
     "scripts": {},
     "name": "nopa",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "main": "index.js",
     "keywords": [
         "npm",

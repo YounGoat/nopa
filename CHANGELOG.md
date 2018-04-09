@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.2.1] - Apr 10th, 2018
+
+*   Dependency __npm-registry-rest__ upgraded to ^0.2.0 to fixed the bug that, on `npm stat ~<owner>`, an uncaught NotFound error will be thrown if the package is published just now.
+
 ##  [0.2.0] - Apr 4th, 2018
 
 *   Sub command `nopa stars` added.
