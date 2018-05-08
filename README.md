@@ -57,6 +57,9 @@ The following sub commands or command-sets are avaiable under command `nopa`:
 *	__statistics__  
 	List statstical information about NPM package or user.
 
+*	__where__  
+	Find the location of specified module.
+
 When no ambiguity present, using heading characters of a sub command is acceptable. E.g., `nopa stat` is regarded as `nopa statistics`.
 
 Run `nopa help <command-name>` to read detailed manual.

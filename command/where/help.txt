@@ -1,0 +1,10 @@
+
+NAME
+    nopa where - Find the location of specified module.
+
+SYNOPSIS
+    nopa where <module-name>
+
+OPTIONS
+    <module-name>
+    Module name.
